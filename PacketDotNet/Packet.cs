@@ -107,15 +107,37 @@ namespace PacketDotNet
 
                 Log.Debug("rebuilding the byte array");
 
-                var memoryStream = new MemoryStream();
+                //var memoryStream = new MemoryStream();
 
+                
                 var headerCopy = HeaderData;
-                memoryStream.Write(headerCopy, 0, headerCopy.Length);
 
-                PayloadPacketOrData.Value.AppendToMemoryStream(memoryStream);
+                byte[] buffer;
 
-                var bytes = memoryStream.ToArray();
-                return new ByteArraySegment(bytes, 0, bytes.Length);
+                if (PayloadPacketOrData.Value.Packet != null)
+                {
+                    var pktBytes = PayloadPacketOrData.Value.Packet.Bytes;
+                    buffer = new byte[headerCopy.Length + pktBytes.Length];
+                    Buffer.BlockCopy(headerCopy, 0, buffer, 0, headerCopy.Length);
+                    Buffer.BlockCopy(pktBytes, 0, buffer, headerCopy.Length, pktBytes.Length);
+                }
+                else
+                {
+                    var segment = PayloadPacketOrData.Value.ByteArraySegment;
+                    var bufSize = headerCopy.Length + segment.Length;
+                    buffer = new byte[bufSize];
+                    Buffer.BlockCopy(headerCopy, 0, buffer, 0, headerCopy.Length);
+                    Buffer.BlockCopy(segment.Bytes, segment.Offset, buffer, headerCopy.Length, segment.Length);                    
+                }
+
+                return new ByteArraySegment(buffer, 0, buffer.Length);
+
+                //memoryStream.Write(headerCopy, 0, headerCopy.Length);
+
+                //PayloadPacketOrData.Value.AppendToMemoryStream(memoryStream);
+
+                //var bytes = memoryStream.ToArray();
+                //return new ByteArraySegment(bytes, 0, bytes.Length);
             }
         }
 
