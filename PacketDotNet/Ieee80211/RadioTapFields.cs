@@ -39,7 +39,7 @@ namespace PacketDotNet.Ieee80211
         {
             FrequencyMHz = br.ReadUInt16();
             Channel = ChannelFromFrequencyMHz(FrequencyMHz);
-            Flags = (RadioTapChannelFlags) br.ReadUInt16();
+            Flags = (RadioTapChannelFlags)br.ReadUInt16();
         }
 
         /// <summary>
@@ -111,206 +111,206 @@ namespace PacketDotNet.Ieee80211
             {
                 //802.11 bg channel numbers
                 case 2412:
-                {
-                    return 1;
-                }
+                    {
+                        return 1;
+                    }
                 case 2417:
-                {
-                    return 2;
-                }
+                    {
+                        return 2;
+                    }
                 case 2422:
-                {
-                    return 3;
-                }
+                    {
+                        return 3;
+                    }
                 case 2427:
-                {
-                    return 4;
-                }
+                    {
+                        return 4;
+                    }
                 case 2432:
-                {
-                    return 5;
-                }
+                    {
+                        return 5;
+                    }
                 case 2437:
-                {
-                    return 6;
-                }
+                    {
+                        return 6;
+                    }
                 case 2442:
-                {
-                    return 7;
-                }
+                    {
+                        return 7;
+                    }
                 case 2447:
-                {
-                    return 8;
-                }
+                    {
+                        return 8;
+                    }
                 case 2452:
-                {
-                    return 9;
-                }
+                    {
+                        return 9;
+                    }
                 case 2457:
-                {
-                    return 10;
-                }
+                    {
+                        return 10;
+                    }
                 case 2462:
-                {
-                    return 11;
-                }
+                    {
+                        return 11;
+                    }
                 case 2467:
-                {
-                    return 12;
-                }
+                    {
+                        return 12;
+                    }
                 case 2472:
-                {
-                    return 13;
-                }
+                    {
+                        return 13;
+                    }
                 case 2484:
-                {
-                    return 14;
-                }
+                    {
+                        return 14;
+                    }
                 //802.11 a channel numbers
                 case 4920:
-                {
-                    return 240;
-                }
+                    {
+                        return 240;
+                    }
                 case 4940:
-                {
-                    return 244;
-                }
+                    {
+                        return 244;
+                    }
                 case 4960:
-                {
-                    return 248;
-                }
+                    {
+                        return 248;
+                    }
                 case 4980:
-                {
-                    return 252;
-                }
+                    {
+                        return 252;
+                    }
                 case 5040:
-                {
-                    return 8;
-                }
+                    {
+                        return 8;
+                    }
                 case 5060:
-                {
-                    return 12;
-                }
+                    {
+                        return 12;
+                    }
                 case 5080:
-                {
-                    return 16;
-                }
+                    {
+                        return 16;
+                    }
                 case 5170:
-                {
-                    return 34;
-                }
+                    {
+                        return 34;
+                    }
                 case 5180:
-                {
-                    return 36;
-                }
+                    {
+                        return 36;
+                    }
                 case 5190:
-                {
-                    return 38;
-                }
+                    {
+                        return 38;
+                    }
                 case 5200:
-                {
-                    return 40;
-                }
+                    {
+                        return 40;
+                    }
                 case 5210:
-                {
-                    return 42;
-                }
+                    {
+                        return 42;
+                    }
                 case 5220:
-                {
-                    return 44;
-                }
+                    {
+                        return 44;
+                    }
                 case 5230:
-                {
-                    return 46;
-                }
+                    {
+                        return 46;
+                    }
                 case 5240:
-                {
-                    return 48;
-                }
+                    {
+                        return 48;
+                    }
                 case 5260:
-                {
-                    return 52;
-                }
+                    {
+                        return 52;
+                    }
                 case 5280:
-                {
-                    return 56;
-                }
+                    {
+                        return 56;
+                    }
                 case 5300:
-                {
-                    return 60;
-                }
+                    {
+                        return 60;
+                    }
                 case 5320:
-                {
-                    return 64;
-                }
+                    {
+                        return 64;
+                    }
                 case 5500:
-                {
-                    return 100;
-                }
+                    {
+                        return 100;
+                    }
                 case 5520:
-                {
-                    return 104;
-                }
+                    {
+                        return 104;
+                    }
                 case 5540:
-                {
-                    return 108;
-                }
+                    {
+                        return 108;
+                    }
                 case 5560:
-                {
-                    return 112;
-                }
+                    {
+                        return 112;
+                    }
                 case 5580:
-                {
-                    return 116;
-                }
+                    {
+                        return 116;
+                    }
                 case 5600:
-                {
-                    return 120;
-                }
+                    {
+                        return 120;
+                    }
                 case 5620:
-                {
-                    return 124;
-                }
+                    {
+                        return 124;
+                    }
                 case 5640:
-                {
-                    return 128;
-                }
+                    {
+                        return 128;
+                    }
                 case 5660:
-                {
-                    return 132;
-                }
+                    {
+                        return 132;
+                    }
                 case 5680:
-                {
-                    return 136;
-                }
+                    {
+                        return 136;
+                    }
                 case 5700:
-                {
-                    return 140;
-                }
+                    {
+                        return 140;
+                    }
                 case 5745:
-                {
-                    return 149;
-                }
+                    {
+                        return 149;
+                    }
                 case 5765:
-                {
-                    return 153;
-                }
+                    {
+                        return 153;
+                    }
                 case 5785:
-                {
-                    return 157;
-                }
+                    {
+                        return 157;
+                    }
                 case 5805:
-                {
-                    return 161;
-                }
+                    {
+                        return 161;
+                    }
                 case 5825:
-                {
-                    return 165;
-                }
+                    {
+                        return 165;
+                    }
                 default:
-                {
-                    return 0;
-                }
+                    {
+                        return 0;
+                    }
             }
         }
 
@@ -320,7 +320,7 @@ namespace PacketDotNet.Ieee80211
         public override void CopyTo(byte[] dest, int offset)
         {
             EndianBitConverter.Little.CopyBytes(FrequencyMHz, dest, offset);
-            EndianBitConverter.Little.CopyBytes((ushort) Flags, dest, offset + 2);
+            EndianBitConverter.Little.CopyBytes((ushort)Flags, dest, offset + 2);
         }
 
         /// <summary>
@@ -350,8 +350,8 @@ namespace PacketDotNet.Ieee80211
         {
             var u16 = br.ReadUInt16();
 
-            ChannelHoppingSet = (byte) (u16 & 0xff);
-            Pattern = (byte) ((u16 >> 8) & 0xff);
+            ChannelHoppingSet = (byte)(u16 & 0xff);
+            Pattern = (byte)((u16 >> 8) & 0xff);
         }
 
         /// <summary>
@@ -442,7 +442,7 @@ namespace PacketDotNet.Ieee80211
         public FlagsRadioTapField(BinaryReader br)
         {
             var u8 = br.ReadByte();
-            Flags = (RadioTapFlags) u8;
+            Flags = (RadioTapFlags)u8;
         }
 
         /// <summary>
@@ -484,7 +484,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            dest[offset] = (byte) Flags;
+            dest[offset] = (byte)Flags;
         }
 
         /// <summary>
@@ -560,7 +560,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            dest[offset] = (byte) (RateMbps / 0.5);
+            dest[offset] = (byte)(RateMbps / 0.5);
         }
 
         /// <summary>
@@ -860,7 +860,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            dest[offset] = (byte) AntennaSignalDbm;
+            dest[offset] = (byte)AntennaSignalDbm;
         }
 
         /// <summary>
@@ -935,7 +935,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            dest[offset] = (byte) AntennaNoisedBm;
+            dest[offset] = (byte)AntennaNoisedBm;
         }
 
         /// <summary>
@@ -1164,7 +1164,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            var flags = (ushort) (PlcpCrcCheckFailed ? 0x2 : 0x0);
+            var flags = (ushort)(PlcpCrcCheckFailed ? 0x2 : 0x0);
             EndianBitConverter.Little.CopyBytes(flags, dest, offset);
         }
 
@@ -1242,7 +1242,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            var absValue = (ushort) Math.Abs(TxPower);
+            var absValue = (ushort)Math.Abs(TxPower);
             EndianBitConverter.Little.CopyBytes(absValue, dest, offset);
         }
 
@@ -1320,7 +1320,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            var absValue = (ushort) Math.Abs(TxPowerdB);
+            var absValue = (ushort)Math.Abs(TxPowerdB);
             EndianBitConverter.Little.CopyBytes(absValue, dest, offset);
         }
 
@@ -1398,7 +1398,7 @@ namespace PacketDotNet.Ieee80211
         /// </summary>
         public override void CopyTo(byte[] dest, int offset)
         {
-            dest[offset] = (byte) TxPowerdBm;
+            dest[offset] = (byte)TxPowerdBm;
         }
 
         /// <summary>
@@ -1438,26 +1438,38 @@ namespace PacketDotNet.Ieee80211
         /// <summary>
         /// Based on the radiotap bitfield determine the fieldAlignment
         /// </summary>
-        /// <returns><c>true</c>, if field was found, <c>false</c> otherwise.</returns>
-        /// <param name="bitIndex">Bit index.</param>
-        /// <param name="fieldAlignment">Field length.</param>
-        public static bool FieldAlignment(int bitIndex, out ushort fieldAlignment)
+        /// <returns>Field length</returns>
+        /// <param name="bitIndex">Bit index.</param>        
+        public static ushort FieldAlignment(int bitIndex)
         {
-            // leverage the existing Parse() routine with a dummy buffer to decode a
-            // RadioTapField instance so we can retrieve its length
-            var emptyBuffer = new byte[32];
-            var memoryStream = new MemoryStream(emptyBuffer);
-            var binaryReader = new BinaryReader(memoryStream);
-
-            var field = Parse(bitIndex, binaryReader);
-            if (field != null)
+            switch ((RadioTapType)bitIndex)
             {
-                fieldAlignment = field.Alignment;
-                return true;
-            }
+                case RadioTapType.Flags:
+                case RadioTapType.Rate:
+                case RadioTapType.DbAntennaSignal:
+                case RadioTapType.DbAntennaNoise:
+                case RadioTapType.Antenna:
+                case RadioTapType.DbmAntennaSignal:
+                case RadioTapType.DbmAntennaNoise:
+                case RadioTapType.DbmTxPower:
+                    return 1;
 
-            fieldAlignment = 0;
-            return false;
+
+                case RadioTapType.Channel:
+                case RadioTapType.Fhss:
+                case RadioTapType.LockQuality:
+                case RadioTapType.TxAttenuation:
+                case RadioTapType.DbTxAttenuation:
+                case RadioTapType.RxFlags:
+                    return 2;
+
+                case RadioTapType.Tsft:
+                    return 8;
+
+
+                default:
+                    return 0;
+            }
         }
 
         /// <summary>
@@ -1474,74 +1486,74 @@ namespace PacketDotNet.Ieee80211
         /// </returns>
         public static RadioTapField Parse(int bitIndex, BinaryReader br)
         {
-            var type = (RadioTapType) bitIndex;
+            var type = (RadioTapType)bitIndex;
             switch (type)
             {
                 case RadioTapType.Flags:
-                {
-                    return new FlagsRadioTapField(br);
-                }
+                    {
+                        return new FlagsRadioTapField(br);
+                    }
                 case RadioTapType.Rate:
-                {
-                    return new RateRadioTapField(br);
-                }
+                    {
+                        return new RateRadioTapField(br);
+                    }
                 case RadioTapType.DbAntennaSignal:
-                {
-                    return new DbAntennaSignalRadioTapField(br);
-                }
+                    {
+                        return new DbAntennaSignalRadioTapField(br);
+                    }
                 case RadioTapType.DbAntennaNoise:
-                {
-                    return new DbAntennaNoiseRadioTapField(br);
-                }
+                    {
+                        return new DbAntennaNoiseRadioTapField(br);
+                    }
                 case RadioTapType.Antenna:
-                {
-                    return new AntennaRadioTapField(br);
-                }
+                    {
+                        return new AntennaRadioTapField(br);
+                    }
                 case RadioTapType.DbmAntennaSignal:
-                {
-                    return new DbmAntennaSignalRadioTapField(br);
-                }
+                    {
+                        return new DbmAntennaSignalRadioTapField(br);
+                    }
                 case RadioTapType.DbmAntennaNoise:
-                {
-                    return new DbmAntennaNoiseRadioTapField(br);
-                }
+                    {
+                        return new DbmAntennaNoiseRadioTapField(br);
+                    }
                 case RadioTapType.Channel:
-                {
-                    return new ChannelRadioTapField(br);
-                }
+                    {
+                        return new ChannelRadioTapField(br);
+                    }
                 case RadioTapType.Fhss:
-                {
-                    return new FhssRadioTapField(br);
-                }
+                    {
+                        return new FhssRadioTapField(br);
+                    }
                 case RadioTapType.LockQuality:
-                {
-                    return new LockQualityRadioTapField(br);
-                }
+                    {
+                        return new LockQualityRadioTapField(br);
+                    }
                 case RadioTapType.TxAttenuation:
-                {
-                    return new TxAttenuationRadioTapField(br);
-                }
+                    {
+                        return new TxAttenuationRadioTapField(br);
+                    }
                 case RadioTapType.DbTxAttenuation:
-                {
-                    return new DbTxAttenuationRadioTapField(br);
-                }
+                    {
+                        return new DbTxAttenuationRadioTapField(br);
+                    }
                 case RadioTapType.DbmTxPower:
-                {
-                    return new DbmTxPowerRadioTapField(br);
-                }
+                    {
+                        return new DbmTxPowerRadioTapField(br);
+                    }
                 case RadioTapType.Tsft:
-                {
-                    return new TsftRadioTapField(br);
-                }
+                    {
+                        return new TsftRadioTapField(br);
+                    }
                 case RadioTapType.RxFlags:
-                {
-                    return new RxFlagsRadioTapField(br);
-                }
+                    {
+                        return new RxFlagsRadioTapField(br);
+                    }
                 default:
-                {
-                    //the RadioTap fields are extendable so there may be some we dont know about
-                    return null;
-                }
+                    {
+                        //the RadioTap fields are extendable so there may be some we dont know about
+                        return null;
+                    }
             }
         }
 

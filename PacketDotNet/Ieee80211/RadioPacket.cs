@@ -55,7 +55,7 @@ namespace PacketDotNet.Ieee80211
         {
             Present = new uint[1];
             RadioTapFields = new SortedDictionary<RadioTapType, RadioTapField>();
-            Length = (ushort) RadioFields.DefaultHeaderLength;
+            Length = (ushort)RadioFields.DefaultHeaderLength;
         }
 
         internal RadioPacket(ByteArraySegment byteArraySegment)
@@ -234,7 +234,7 @@ namespace PacketDotNet.Ieee80211
         public void Add(RadioTapField field)
         {
             RadioTapFields[field.FieldType] = field;
-            var presenceBit = (int) field.FieldType;
+            var presenceBit = (int)field.FieldType;
             var presenceFieldIndex = presenceBit / 32;
             if (Present.Length <= presenceFieldIndex)
             {
@@ -249,7 +249,7 @@ namespace PacketDotNet.Ieee80211
                 Present = newPresentFields;
             }
 
-            Present[presenceFieldIndex] |= (uint) (1 << presenceBit);
+            Present[presenceFieldIndex] |= (uint)(1 << presenceBit);
 
             Length = UpdatePresentAndBeyond(null);
         }
@@ -265,9 +265,9 @@ namespace PacketDotNet.Ieee80211
             if (RadioTapFields.TryGetValue(fieldType, out var field))
             {
                 RadioTapFields.Remove(fieldType);
-                var presenceBit = (int) field.FieldType;
+                var presenceBit = (int)field.FieldType;
                 var presenceField = presenceBit / 32;
-                Present[presenceField] &= (uint) ~(1 << presenceBit);
+                Present[presenceField] &= (uint)~(1 << presenceBit);
                 Length = UpdatePresentAndBeyond(null);
             }
         }
@@ -308,7 +308,7 @@ namespace PacketDotNet.Ieee80211
             var bitmaskArray = new int[1];
             foreach (var bitmask in bitmasks)
             {
-                bitmaskArray[0] = (int) bitmask;
+                bitmaskArray[0] = (int)bitmask;
                 var ba = new BitArray(bitmaskArray);
 
                 var unhandledFieldFound = false;
@@ -319,9 +319,9 @@ namespace PacketDotNet.Ieee80211
                 {
                     if (ba[x])
                     {
-                        var wasFieldAlignmentFound = RadioTapField.FieldAlignment(bitIndex, out ushort fieldAlignment);
+                        var fieldAlignment = RadioTapField.FieldAlignment(bitIndex);
 
-                        if (wasFieldAlignmentFound)
+                        if (fieldAlignment != 0)
                         {
                             // skip over the padding bytes to align to the field we are trying to read
                             var remainder = (offsetAfterBitmasks + br.BaseStream.Position) % fieldAlignment;
@@ -432,7 +432,7 @@ namespace PacketDotNet.Ieee80211
                 index += UnhandledFieldBytes.Length;
             }
 
-            return (ushort) index;
+            return (ushort)index;
         }
 
         /// <summary>

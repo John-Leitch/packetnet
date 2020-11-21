@@ -199,7 +199,8 @@ namespace PacketDotNet.Utils
             {
                 Log.Debug("needs copy");
                 var bytes = new byte[Length];
-                Array.Copy(Bytes, Offset, bytes, 0, Length);
+                Buffer.BlockCopy(Bytes, Offset, bytes, 0, Length);
+                //Array.Copy(Bytes, Offset, bytes, 0, Length);
                 return bytes;
             }
 
